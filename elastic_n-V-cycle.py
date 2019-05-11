@@ -220,7 +220,7 @@ while (b - A*(x1_set[0])).norm() > tol:
 	for i in range(3, 0, -1):
 		e_set[i-1] = P*e_set[i]
 		x1_set[i-1] = e_set[i-1] + x_set[i-1]
-		A_set[i-1].SOR(b_set[i-1], x1_set[i-1], its=5, lits=100)
+		A_set[i-1].SOR(b_set[i-1], x1_set[i-1], its=50, lits=100)
 	
 	print((b_set[0]-A_set[0]*x1_set[0]).norm())
 print((b_set[0]-A_set[0]*x1_set[0]).norm())
